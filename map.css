@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+  }
+     
+  #map {
+    width: 100%;    /* Adjust width to your desired size */
+    height: 100%;   /* Adjust height to your desired size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for effect */
+    border-radius: 8px; /* Optional: rounded corners */
+  }
+
+  #map svg {
+    position: absolute;  /* Position it on top */
+    top: 0;
+    left: 0;
+    z-index: 2;          /* Place it above the map */
+    width: 100%;         /* Fill the width of the map */
+    height: 100%;        /* Fill the height of the map */
+    pointer-events: none; /* Allows map interactions through the SVG */
+  }
+
+  #map svg circle {
+    fill-opacity: 0.6; /* Semi-transparent circles */
+    stroke: white;     /* White outline for contrast */
+    stroke-width: 0.5; /* Thin border */
+  }
+  
+  circle {
+    pointer-events: auto;
+  }
+
+  #time-slider {
+    width: 300px;
+    margin-left: 10px;
+  }
+  
+  #selected-time {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  
+  em {
+    color: #999;
+    font-style: italic;
+  }
